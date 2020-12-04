@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="pagination.css">
+
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>Transition Effect on Hover</h2>
+<p>Move the mouse over the numbers.</p>
+
+<div id="pagination" class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+</div>
+
+<h2><a href="/">Back</a></h2>
+<script>
+  
+  const pagination = document.getElementById("pagination");
+  pagination.addEventListener('click', (event) => {
+    pagination.querySelectorAll("a").forEach((el) => { el.classList.remove("active");});
+    event.target.classList.add("active");
+  });
+
+
+  
+</script>
+</body>
+</html>

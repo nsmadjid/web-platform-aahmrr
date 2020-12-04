@@ -1,0 +1,83 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="naviguation.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.rotation {
+			margin-top: 100px;
+		}
+
+		.inner {
+			margin: 25px;
+			padding: 14px 11px;
+			width: 90px;
+			height: 94px;
+			background-color: blue;
+			text-align: center;
+		}
+
+		.inner>div {
+			width: 66px;
+			height: 8px;
+			background-color: whitesmoke;
+			border-radius: 5px;
+			margin-top: 10px;
+			transition: transform .5s;
+		}
+
+		.inner:hover>div.line1 {
+			position: relative;
+			width: 100px;
+			top: 17px;
+			left: -16px;
+			margin-top: 10px;
+			transform: rotate(45deg);
+		}
+
+		.inner:hover>div.line2 {
+			display: none;
+		}
+
+		.inner:hover>div.line3 {
+			position: relative;
+			width: 100px;
+			top: 0;
+			left: -16px;
+			margin-top: 10px;
+			transform: rotate(135deg);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<input type="checkbox" id="menu-toggle">
+		<label for="menu-toggle" id="toggle-off">&#9655;</label>
+		<label for="menu-toggle" id="toggle-on">&#9661;</label>
+		<nav>
+			<span><a href="/">Home</a></span>
+			<span><a href="#">Docs</a></span>
+			<span><a href="#">About</a></span>
+			<span><a href="#">Contact</a></span>
+		</nav>
+	</header>
+
+	<div class="rotation">
+		<div class="inner">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
